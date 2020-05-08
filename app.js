@@ -175,8 +175,8 @@ const opportunities = [
         "BlogImageSmall": "http://placeimg.com/600/432",
         "BlogImageBig": "http://placeimg.com/950/350",
         "SkillLevel": "Intermediate",
-        "Where": "Walsall",
-        "LiveIn": "Walsall",
+        "Where": "Birmingham",
+        "LiveIn": "Birmingham",
         "Age": "18 or older",
         "DateFrom": "2020-01-16T00:00:00",
         "DateTo": "2020-04-14T00:00:00"
@@ -205,8 +205,8 @@ const opportunities = [
         "BlogImageSmall": "http://placeimg.com/600/432",
         "BlogImageBig": "http://placeimg.com/950/350",
         "SkillLevel": "Beginner",
-        "Where": "Solihull",
-        "LiveIn": "Solihull",
+        "Where": "London",
+        "LiveIn": "South",
         "Age": "18 or older",
         "DateFrom": "2020-03-06T00:00:00",
         "DateTo": "2022-08-14T00:00:00"
@@ -223,7 +223,7 @@ for (let i = 0; i < opportunities.length; i++) {
     console.log(opportunities[i]);
 }
 
-console.log('break');
+console.log('Break');
 
 //For each 
 
@@ -231,6 +231,46 @@ opportunities.forEach(function (opportunity) {
     console.log(opportunity);
 });
 
-console.log('break');
+console.log('Break');
 
 //Reduce
+
+let oldEnough = [];
+
+for (let i = 0; i < ages.length; i++) {
+    if (ages[i] >= 23) {
+        oldEnough.push(ages[i]);
+    }
+}
+
+console.log('Using Reduce');
+console.log(oldEnough);
+
+//Filter
+// const checkAge = ages.filter(function (age) {
+//     if (age >= 23) {
+//         return true;
+//     }
+// });
+
+//Using Arrow Func
+const checkAge = ages.filter(age => age >= 23);
+
+console.log('Using Filter');
+console.log(checkAge);
+
+
+
+//Get location of the job posting:
+
+// const locationJob = opportunities.filter(function (opportunity) {
+//     if (opportunity.Where = 'London') {
+//         return true;
+//     }
+// });
+
+const locationJob = opportunities.filter(opportunity => opportunity.Where === 'London');
+
+console.log("locationJob");
+console.log(locationJob);
+
