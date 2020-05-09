@@ -274,3 +274,50 @@ const locationJob = opportunities.filter(opportunity => opportunity.Where === 'L
 console.log("locationJob");
 console.log(locationJob);
 
+
+
+//Map
+
+const OppNames = opportunities.map(function (opportunity) {
+    return opportunity.Name;
+});
+
+console.log("OppNames");
+console.log(OppNames);
+
+//Map Category
+const jobCats = opportunities.map(function (opportunity) {
+    return opportunity.Category;
+});
+
+console.log("jobCats");
+console.log(jobCats);
+
+//Map Fun
+
+const mapFun = opportunities.map(opportunity => `
+    ${opportunity.Eligibility} -
+    ${opportunity.Opportunity} -
+    ${opportunity.SkillLevel} -
+    ${opportunity.Where} -
+    ${opportunity.Age} -
+    ${opportunity.BlogContent} -
+    `
+);
+
+
+console.log("mapFun");
+console.log(mapFun);
+
+
+//Square Root of ages * 10 - 1
+
+const agesFun = ages
+    .map(age => Math.sqrt(age))
+    .map(age => age * 10 - 1);
+
+console.log(agesFun);
+
+
+
+
